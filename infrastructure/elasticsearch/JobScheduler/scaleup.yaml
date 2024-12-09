@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: scale-up-elasticsearch
+  namespace: elasticsearch
+spec:
+  schedule: "30 8 * * 1-5"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: elasticsearch-sa
+          containers:
+          - name: kubectl
+            image: bitnami/kubectl:latest
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":2}}'
+          restartPolicy: OnFailure
