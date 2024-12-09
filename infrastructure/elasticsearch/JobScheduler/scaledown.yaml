@@ -4,7 +4,7 @@ metadata:
   name: scale-down-elasticsearch
   namespace: elasticsearch
 spec:
-  schedule: "22 15 * * 1-5"
+  schedule: "55 15 * * 1-5"
   jobTemplate:
     spec:
       template:
@@ -17,7 +17,8 @@ spec:
             command:
             - /bin/sh
             - -c
-            - kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":0}}'
+            - kubectl scale statefulsets elasticsearch-master --replicas=0
+            #- kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":0}}'
           restartPolicy: OnFailure
           
           
