@@ -4,7 +4,7 @@ metadata:
   name: scale-down-elasticsearch
   namespace: elasticsearch
 spec:
-  schedule: "40 16 * * 1-5"
+  schedule: "42 16 * * 1-5"
   jobTemplate:
     spec:
       template:
@@ -14,10 +14,16 @@ spec:
           - name: kubectl
             image: bitnami/kubectl:latest
             imagePullPolicy: IfNotPresent
-            command:
-            - /bin/sh
-            - -c
-            - kubectl scale statefulsets elasticsearch-master -n elasticsearch --replicas=0
+            # command:
+            # - /bin/sh
+            # - -c
+            # - kubectl scale statefulsets elasticsearch-master -n elasticsearch --replicas=0
+            args:
+              - scale
+              - statefulsets
+              - elasticsearch-master   
+              - --namespace=elasticsearch
+              - --replicas=0
             #- kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":0}}'
           restartPolicy: OnFailure
           
