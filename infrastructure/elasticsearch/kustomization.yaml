@@ -3,11 +3,11 @@ kind: Kustomization
 resources:
   - release.yaml
   - namespace.yaml
-  - ServiceAccount.yaml
-  - Role.yaml
-  - RoleBinding.yaml
-  - scaledown.yaml
-  - scaleup.yaml
+  # - ServiceAccount.yaml
+  # - Role.yaml
+  # - RoleBinding.yaml
+  # - scaledown.yaml
+  # - scaleup.yaml
 configMapGenerator:
   - name: elasticsearch-values
     namespace: cluster-config
