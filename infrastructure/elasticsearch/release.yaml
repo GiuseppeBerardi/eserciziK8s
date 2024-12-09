@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: elasticsearch
+  namespace: cluster-config
+spec:
+  targetNamespace: elasticsearch
+  releaseName: elasticsearch
+  chart:
+    spec:
+      chart: elasticsearch
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: cluster-config
+      version: "21.x"
+  interval: 1h0m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: elasticsearch-values
