@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: bitnami
+spec:
+  interval: 30m
+  #refert to https://blog.bitnami.com/2023/04/httpsblog.bitnami.com202304bitnami-helm-charts-now-oci.html
+  # url: https://charts.bitnami.com/bitnami
+  type: "oci"
+  url: oci://registry-1.docker.io/bitnamicharts
