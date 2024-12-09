@@ -3,11 +3,11 @@ kind: Kustomization
 resources:
   - release.yaml
   - namespace.yaml
-  - JobScheduler\ServiceAccount.yaml
-  - JobScheduler\Role.yaml
-  - JobScheduler\RoleBinding.yaml
-  - JobScheduler\scaledown.yaml
-  - JobScheduler\scaleup.yaml
+  - JobScheduler/ServiceAccount.yaml
+  - JobScheduler/Role.yaml
+  - JobScheduler/RoleBinding.yaml
+  - JobScheduler/scaledown.yaml
+  - JobScheduler/scaleup.yaml
 configMapGenerator:
   - name: elasticsearch-values
     namespace: cluster-config
