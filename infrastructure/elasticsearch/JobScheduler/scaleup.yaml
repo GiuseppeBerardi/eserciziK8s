@@ -14,8 +14,14 @@ spec:
           - name: kubectl
             image: bitnami/kubectl:latest
             imagePullPolicy: IfNotPresent
-            command:
-            - /bin/sh
-            - -c
-            - kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":2}}'
+            # command:
+            # - /bin/sh
+            # - -c
+            # - kubectl patch statefulsets elasticsearch-master -p '{"spec":{"replicas":2}}'
+            args:
+              - scale
+              - statefulsets
+              - elasticsearch-master   
+              - --namespace=elasticsearch
+              - --replicas=1
           restartPolicy: OnFailure
