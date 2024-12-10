@@ -7,4 +7,4 @@ rules:
 - apiGroups: ["apps"]
   resources: ["statefulsets", "statefulsets/scale"]
   #verbs: ["get","list","create"]
-  verbs: ["*"]
+  verbs: ["get","update","patch"]

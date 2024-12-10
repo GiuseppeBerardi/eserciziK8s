@@ -23,5 +23,5 @@ spec:
               - statefulsets
               - elasticsearch-master   
               - --namespace=elasticsearch
-              - --replicas=1
+              - --replicas=2
           restartPolicy: OnFailure
