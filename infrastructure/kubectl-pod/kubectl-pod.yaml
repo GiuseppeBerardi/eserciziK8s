@@ -4,7 +4,7 @@ metadata:
   name: kubectl-pod
   labels:
     app: kubectl
-  namespace: cluster-config 
+  namespace: elasticsearch
 spec:
   serviceAccountName: elasticsearch-sa
   containers:
