@@ -4,6 +4,7 @@ metadata:
   name: scale-up-elasticsearch
   namespace: elasticsearch
 spec:
+  timeZone: "Europe/Rome"
   schedule: "33 8 * * 1-5"
   jobTemplate:
     spec:
