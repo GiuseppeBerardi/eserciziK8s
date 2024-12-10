@@ -4,7 +4,7 @@ resources:
   - release.yaml
   - namespace.yaml
 configMapGenerator:
-  - name: elasticsearch-values
+  - name: metrics-server-values
     namespace: cluster-config
     files:
       - values.yaml=values.yaml
