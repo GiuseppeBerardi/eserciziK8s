@@ -4,7 +4,7 @@ metadata:
   name: scale-up-elasticsearch
   namespace: elasticsearch
 spec:
-  schedule: "30 8 * * 1-5"
+  schedule: "05 8 * * 1-5"
   jobTemplate:
     spec:
       template:
