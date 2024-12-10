@@ -4,7 +4,7 @@ metadata:
   name: scale-up-elasticsearch
   namespace: elasticsearch
 spec:
-  schedule: "05 8 * * 1-5"
+  schedule: "33 8 * * 1-5"
   jobTemplate:
     spec:
       template:
@@ -23,5 +23,5 @@ spec:
               - statefulsets
               - elasticsearch-master   
               - --namespace=elasticsearch
-              - --replicas=2
+              - --replicas=1
           restartPolicy: OnFailure
