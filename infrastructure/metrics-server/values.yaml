@@ -1,2 +1,6 @@
 # Default values
 # https://github.com/bitnami/charts/blob/main/bitnami/metrics-server/values.yaml
+apiService:
+  create: true
+extraArgs:
+  - --kubelet-insecure-tls=true
