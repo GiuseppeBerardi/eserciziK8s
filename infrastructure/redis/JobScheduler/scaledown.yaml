@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: scale-down
+  namespace: redis
+spec:
+  timeZone: "Europe/Rome"
+  schedule: "40 17 * * 1-5"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: redis-sa
+          containers:
+          - name: kubectl
+            image: bitnami/kubectl:latest
+            imagePullPolicy: IfNotPresent
+            args:
+              - scale
+              - statefulsets
+              - redis-replicas   
+              - --namespace=redis
+              - --replicas=0
+          restartPolicy: OnFailure
+          
