@@ -8,7 +8,7 @@ replica:
   kind: StatefulSet
   ## @param replica.replicaCount Number of Redis&reg; replicas to deploy
   ##
-  replicaCount: 2
+  replicaCount: 1
 
 
 
