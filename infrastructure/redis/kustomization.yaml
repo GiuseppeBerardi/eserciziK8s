@@ -7,6 +7,8 @@ resources:
   - Role/Role.yaml
   - Role/RoleBinding.yaml
   - kubectl-redispod/kubectl-redispod.yaml
+  - JobScheduler/scaledown.yaml
+  - JobScheduler/scaleup.yaml
 configMapGenerator:
   - name: redis-values
     namespace: cluster-config
