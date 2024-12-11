@@ -6,7 +6,7 @@ resources:
   - Role/ServiceAccount.yaml
   - Role/Role.yaml
   - Role/RoleBinding.yaml
- # - kubectl-redispod/kubectl-redispod.yaml
+  - kubectl-redispod/kubectl-redispod.yaml
 configMapGenerator:
   - name: redis-values
     namespace: cluster-config
