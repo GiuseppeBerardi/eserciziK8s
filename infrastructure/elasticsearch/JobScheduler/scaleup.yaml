@@ -5,7 +5,7 @@ metadata:
   namespace: elasticsearch
 spec:
   timeZone: "Europe/Rome"
-  schedule: "33 8 * * 1-5"
+  schedule: "30 8 * * 1-5"
   jobTemplate:
     spec:
       template:
@@ -24,5 +24,5 @@ spec:
               - statefulsets
               - elasticsearch-master   
               - --namespace=elasticsearch
-              - --replicas=1
+              - --replicas=2
           restartPolicy: OnFailure

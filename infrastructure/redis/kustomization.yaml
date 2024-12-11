@@ -3,6 +3,10 @@ kind: Kustomization
 resources:
   - release.yaml
   - namespace.yaml
+  - kubectl-redispod/kubectl-redispod.yaml
+  - Role/Role.yaml
+  - Role/RoleBinding.yaml
+  - Role/ServiceAccount.yaml
 configMapGenerator:
   - name: redis-values
     namespace: cluster-config
