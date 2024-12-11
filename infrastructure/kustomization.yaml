@@ -5,3 +5,4 @@ resources:
   - elasticsearch
   - metrics-server
   - kubectl-pod
+  - redis
