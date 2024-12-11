@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ClusterRole-pod
+  name: clusterRole-pod
   labels:
     app: kubectl
   namespace: default
 spec:
-  serviceAccountName: Cluster-sa
+  serviceAccountName: cluster-sa
   containers:
     - name: kubectl-container
       image: bitnami/kubectl:latest

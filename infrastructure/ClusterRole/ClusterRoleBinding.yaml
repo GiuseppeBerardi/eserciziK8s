@@ -4,9 +4,9 @@ metadata:
   name: cluster-rolebinding
 subjects:
 - kind: ServiceAccount
-  name:  Cluster-sa
+  name:  cluster-sa
   namespace: default
 roleRef:
   kind: ClusterRole
-  name: Cluster-role
+  name: cluster-role
   apiGroup: rbac.authorization.k8s.io
