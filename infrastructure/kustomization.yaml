@@ -6,4 +6,5 @@ resources:
   - metrics-server
   - kubectl-pod
   - redis
+  - ClusterRole
 
