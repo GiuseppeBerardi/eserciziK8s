@@ -6,5 +6,5 @@ metadata:
 rules:
 - apiGroups: ["apps"]
   resources: ["statefulsets", "statefulsets/scale"]
-  verbs: ["get","update","patch","list"]
+  verbs: ["get","update","patch","list","watch"]
 
