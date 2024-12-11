@@ -4,7 +4,7 @@ metadata:
   name: cluster-pod
   labels:
     app: kubectl
-  namespace: default
+  namespace: prova
 spec:
   serviceAccountName: cluster-sa
   containers:

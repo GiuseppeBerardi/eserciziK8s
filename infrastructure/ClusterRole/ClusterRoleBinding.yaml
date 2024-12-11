@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name:  cluster-sa
-  namespace: default
+  namespace: prova
 roleRef:
   kind: ClusterRole
   name: cluster-role
