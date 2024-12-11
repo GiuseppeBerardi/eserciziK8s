@@ -4,6 +4,7 @@ metadata:
   name: ClusterRole-pod
   labels:
     app: kubectl
+  namespace: default
 spec:
   serviceAccountName: Cluster-sa
   containers:
