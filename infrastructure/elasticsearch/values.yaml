@@ -1,6 +1,6 @@
 global:
   defaultStorageClass: "csi-hostpath-sc"
-  #kibanaEnabled: true
+  kibanaEnabled: false
 
 master:
   annotations: 
