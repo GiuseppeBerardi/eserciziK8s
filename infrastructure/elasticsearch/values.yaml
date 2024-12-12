@@ -7,7 +7,7 @@ master:
     backup.velero.io/backup-volumes: "data"
   podAnnotations:
     backup.velero.io/backup-volumes: "data"
-  heapSize: 256m
+  heapSize: 128m
   masterOnly: false
   replicaCount: 1
 data:
