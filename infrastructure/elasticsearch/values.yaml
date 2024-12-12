@@ -16,7 +16,7 @@ coordinating:
   replicaCount: 0
 ingest:
   replicaCount: 0
-  
+
 security:
   enabled: true
   elasticPassword: "Password"
