@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - sources
   - elasticsearch
-  - metrics-server
+  #- metrics-server
   #- kubectl-pod
   #- redis
   #- ClusterRole
