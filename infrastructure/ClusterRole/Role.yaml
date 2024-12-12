@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: cluster-role-master
 rules:
-- apiGroups: ["apps", ""]
-  resources: ["statefulsets", "statefulsets/scale", "pods"]
+- apiGroups: ["apps", "", "storage.k8s.io"]
+  resources: ["statefulsets", "statefulsets/scale", "pods", "storageclasses"]
   verbs: ["get","update","patch","list","watch"]
