@@ -6,7 +6,7 @@
 #   tag: 8.16.1 # da rimuovere non appena oci avrà allineato laversione con hhtps!
 global:
   storageClass: "csi-hostpath-sc"
-  kibanaEnabled: true
+  #kibanaEnabled: true
 master:
   resourcesPreset: "none"
   # resources:
