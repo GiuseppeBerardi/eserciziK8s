@@ -3,6 +3,15 @@ global:
  # kibanaEnabled: true
 
 master:
+  containerSecurityContext:
+  enabled: true
+  seLinuxOptions: {}
+  runAsUser: 0
+  runAsGroup: 0
+  runAsNonRoot: false
+  privileged: true
+  allowPrivilegeEscalation: true
+  readOnlyRootFilesystem: false
   annotations: 
     backup.velero.io/backup-volumes: "data"
   podAnnotations:
@@ -16,15 +25,7 @@ coordinating:
   replicaCount: 0
 ingest:
   replicaCount: 0
-containerSecurityContext:
-  enabled: true
-  seLinuxOptions: {}
-  runAsUser: 0
-  runAsGroup: 0
-  runAsNonRoot: false
-  privileged: true
-  allowPrivilegeEscalation: true
-  readOnlyRootFilesystem: false
+
 
 # security:
 #   enabled: true
