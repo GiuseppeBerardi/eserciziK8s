@@ -10,10 +10,6 @@ master:
   heapSize: 256m
   masterOnly: false
   replicaCount: 1
-  podSecurityContext:
-    enabled: false
-  containerSecurityContext:
-    enabled: false
 data:
   replicaCount: 0
 coordinating:
@@ -21,7 +17,14 @@ coordinating:
 ingest:
   replicaCount: 0
 
+extraVolumes:
+  - name: elasticsearch-data
+    hostPath:
+      path: /dev/sdc
 
+extraVolumeMounts:
+  - name: elasticsearch-data
+    mountPath: /bitnami/elasticsearch/data
 # security:
 #   enabled: true
 #   elasticPassword: "Password"
