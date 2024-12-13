@@ -3,20 +3,6 @@ global:
  # kibanaEnabled: true
 
 master:
-  annotations: 
-    backup.velero.io/backup-volumes: "data"
-  podAnnotations:
-    backup.velero.io/backup-volumes: "data"
-  heapSize: 256m
-  masterOnly: false
-  replicaCount: 1
-data:
-  replicaCount: 0
-coordinating:
-  replicaCount: 0
-ingest:
-  replicaCount: 0
-
   podSecurityContext:
     enabled: true
     fsGroupChangePolicy: Always
@@ -49,6 +35,21 @@ ingest:
       drop: ["ALL"]
     seccompProfile:
       type: "RuntimeDefault"
+  annotations: 
+    backup.velero.io/backup-volumes: "data"
+  podAnnotations:
+    backup.velero.io/backup-volumes: "data"
+  heapSize: 256m
+  masterOnly: false
+  replicaCount: 1
+data:
+  replicaCount: 0
+coordinating:
+  replicaCount: 0
+ingest:
+  replicaCount: 0
+
+
 
 # security:
 #   enabled: true
