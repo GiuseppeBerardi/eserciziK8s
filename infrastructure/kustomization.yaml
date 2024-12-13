@@ -4,6 +4,6 @@ resources:
   - sources
   - elasticsearch
   - metrics-server
-  - kubectl-pod
-  - redis
+  #- kubectl-pod
+  #- redis
   - ClusterRole

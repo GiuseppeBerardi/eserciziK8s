@@ -1,13 +1,13 @@
 global:
   defaultStorageClass: "csi-hostpath-sc"
-  kibanaEnabled: false
+  #kibanaEnabled: true
 
 master:
   annotations: 
     backup.velero.io/backup-volumes: "data"
   podAnnotations:
     backup.velero.io/backup-volumes: "data"
-  heapSize: 128m
+  heapSize: 256m
   masterOnly: false
   replicaCount: 1
 data:
