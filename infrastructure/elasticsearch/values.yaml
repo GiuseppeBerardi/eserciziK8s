@@ -3,38 +3,6 @@ global:
  # kibanaEnabled: true
 
 master:
-  podSecurityContext:
-    enabled: false
-    fsGroupChangePolicy: Always
-    sysctls: []
-    supplementalGroups: []
-    fsGroup: 0
-  ## Configure Container Security Context
-  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
-  ## @param master.containerSecurityContext.enabled Elasticseacrh master-eligible container securityContext
-  ## @param master.containerSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
-  ## @param master.containerSecurityContext.runAsUser User ID for the Elasticseacrh master-eligible container
-  ## @param master.containerSecurityContext.runAsGroup Group ID for the Elasticseacrh master-eligible container
-  ## @param master.containerSecurityContext.runAsNonRoot Set Elasticsearch master-eligible container's Security Context runAsNonRoot
-  ## @param master.containerSecurityContext.privileged Set Elasticsearch master-eligible container's Security Context privileged
-  ## @param master.containerSecurityContext.allowPrivilegeEscalation Set Elasticsearch master-eligible container's Security Context allowPrivilegeEscalation
-  ## @param master.containerSecurityContext.readOnlyRootFilesystem Set container's Security Context readOnlyRootFilesystem
-  ## @param master.containerSecurityContext.capabilities.drop List of capabilities to be dropped
-  ## @param master.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
-  ##
-  containerSecurityContext:
-    enabled: false
-    seLinuxOptions: {}
-    runAsUser: 0
-    runAsGroup: 0
-    runAsNonRoot: false
-    privileged: true
-    allowPrivilegeEscalation: true
-    readOnlyRootFilesystem: false
-    capabilities:
-      drop: ["ALL"]
-    seccompProfile:
-      type: "RuntimeDefault"
   annotations: 
     backup.velero.io/backup-volumes: "data"
   podAnnotations:
