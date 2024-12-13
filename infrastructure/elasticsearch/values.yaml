@@ -16,7 +16,16 @@ coordinating:
   replicaCount: 0
 ingest:
   replicaCount: 0
-  
+containerSecurityContext:
+  enabled: true
+  seLinuxOptions: {}
+  runAsUser: 1001
+  runAsGroup: 1001
+  runAsNonRoot: false
+  privileged: true
+  allowPrivilegeEscalation: true
+  readOnlyRootFilesystem: false
+
 # security:
 #   enabled: true
 #   elasticPassword: "Password"
