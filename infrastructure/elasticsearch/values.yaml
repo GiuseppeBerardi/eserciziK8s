@@ -3,6 +3,12 @@ global:
  # kibanaEnabled: true
 
 master:
+  podSecurityContext:
+    enabled: true
+    fsGroupChangePolicy: Always
+    sysctls: []
+    supplementalGroups: []
+    fsGroup: 0
   containerSecurityContext:
   enabled: true
   seLinuxOptions: {}
