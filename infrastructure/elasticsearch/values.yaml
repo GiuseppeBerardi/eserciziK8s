@@ -10,6 +10,9 @@ master:
   heapSize: 256m
   masterOnly: false
   replicaCount: 1
+  containerSecurityContext:
+    enabled: true
+    readOnlyRootFilesystem: false
 data:
   replicaCount: 0
 coordinating:
