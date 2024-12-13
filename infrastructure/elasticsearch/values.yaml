@@ -16,15 +16,6 @@ coordinating:
   replicaCount: 0
 ingest:
   replicaCount: 0
-
-extraVolumes:
-  - name: elasticsearch-data
-    hostPath:
-      path: /dev/sdc
-
-extraVolumeMounts:
-  - name: elasticsearch-data
-    mountPath: /bitnami/elasticsearch/data
 # security:
 #   enabled: true
 #   elasticPassword: "Password"
