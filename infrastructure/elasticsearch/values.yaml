@@ -9,7 +9,7 @@ master:
     backup.velero.io/backup-volumes: "data"
   heapSize: 256m
   masterOnly: false
-  replicaCount: 2
+  replicaCount: 1
 data:
   replicaCount: 0
 coordinating:
