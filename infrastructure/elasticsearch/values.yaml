@@ -4,7 +4,7 @@ global:
 
 master:
   podSecurityContext:
-    enabled: true
+    enabled: false
     fsGroupChangePolicy: Always
     sysctls: []
     supplementalGroups: []
@@ -23,7 +23,7 @@ master:
   ## @param master.containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
   ##
   containerSecurityContext:
-    enabled: true
+    enabled: false
     seLinuxOptions: {}
     runAsUser: 0
     runAsGroup: 0
