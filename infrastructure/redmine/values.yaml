@@ -2,3 +2,9 @@
 # https://github.com/bitnami/charts/blob/main/bitnami/redmine/values.yaml
 global:
   defaultStorageClass: "csi-hostpath-sc-retain"
+
+persistence:
+  ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+  ##
+  accessModes:
+    - ReadWriteMany
