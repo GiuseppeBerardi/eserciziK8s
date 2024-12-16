@@ -9,4 +9,4 @@ resources:
   #- ClusterRole
   - storageClass
   #- mariadb
-  #- redmine
+  - redmine
