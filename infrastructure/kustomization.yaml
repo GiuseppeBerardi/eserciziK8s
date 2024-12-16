@@ -7,3 +7,4 @@ resources:
   #- kubectl-pod
   #- redis
   - ClusterRole
+  - StorageClass
