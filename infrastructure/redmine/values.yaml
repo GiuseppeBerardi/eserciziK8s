@@ -1,0 +1,4 @@
+# Default values
+# https://github.com/bitnami/charts/blob/main/bitnami/redmine/values.yaml
+global:
+  defaultStorageClass: "csi-hostpath-sc-retain"
