@@ -1,6 +1,12 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"storage.k8s.io/v1","kind":"StorageClass","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile"},"name":"csi-hostpath-sc-retain"},"provisioner":"hostpath.csi.k8s.io","reclaimPolicy":"Retain","volumeBindingMode":"Immediate"}
+    storageclass.kubernetes.io/is-default-class: "false"
+  labels:
+    addonmanager.kubernetes.io/mode: Reconcile
   name: csi-hostpath-sc-retain
 provisioner: hostpath.csi.k8s.io
 reclaimPolicy: Retain
