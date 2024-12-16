@@ -1,5 +1,5 @@
 global:
-  defaultStorageClass: "csi-hostpath-sc"
+  defaultStorageClass: "csi-hostpath-sc-retain"
  # kibanaEnabled: true
 
 master:
