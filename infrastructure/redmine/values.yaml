@@ -5,7 +5,9 @@ global:
   postgresql:
     auth:
       password: "P@assword"
-
+mariadb:
+  auth:
+    rootPassword: "P@assword"
 persistence:
   ## @param persistence.enabled Enable persistence using Persistent Volume Claims
   ##
