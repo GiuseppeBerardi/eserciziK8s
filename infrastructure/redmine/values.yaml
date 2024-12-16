@@ -8,6 +8,7 @@ global:
 mariadb:
   auth:
     rootPassword: "P@assword"
+redminePassword: "P@assword"
 persistence:
   ## @param persistence.enabled Enable persistence using Persistent Volume Claims
   ##
