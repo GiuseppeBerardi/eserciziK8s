@@ -6,7 +6,7 @@ resources:
   - metrics-server
   #- kubectl-pod
   #- redis
-  #- ClusterRole
+  - ClusterRole
   - storageClass
   - mariadb
   #- redmine
