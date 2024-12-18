@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: root-access-pod
-  namespace: elasticsearch
+  namespace: podroot
 spec:
   containers:
     - name: ubuntu-container
