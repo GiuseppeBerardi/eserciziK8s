@@ -5,4 +5,4 @@ resources:
   - ServiceAccount.yaml
   - Role.yaml
   - ClusterRoleBinding.yaml
-  - kubectl-pod.yaml
+  #- kubectl-pod.yaml
