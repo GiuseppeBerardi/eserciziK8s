@@ -8,5 +8,5 @@ resources:
   #- redis
   - ClusterRole
   - storageClass
-  #- mariadb
+  - mariadb
   #- redmine
