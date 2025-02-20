@@ -8,6 +8,6 @@ resources:
   #- redis
   - ClusterRole
   - storageClass
-  - mariadb
+  #- mariadb
   - minio
   #- redmine
