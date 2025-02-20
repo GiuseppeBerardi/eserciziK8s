@@ -9,4 +9,5 @@ resources:
   - ClusterRole
   - storageClass
   - mariadb
+  - minio
   #- redmine
