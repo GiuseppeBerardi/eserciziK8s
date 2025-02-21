@@ -3,20 +3,11 @@
 service:
   ## @param service.type MinIO&reg; service type
   ##
-  type: ClusterIP
-  ## @param service.ports.api MinIO&reg; API service port
-  ## @param service.ports.console MinIO&reg; Console service port
-  ##
-  ports:
-    api: 9000
-    console: 9001
-  ## @param service.nodePorts.api Specify the MinIO&reg API nodePort value for the LoadBalancer and NodePort service types
-  ## @param service.nodePorts.console Specify the MinIO&reg Console nodePort value for the LoadBalancer and NodePort service types
-  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
-  ##
-  nodePorts:
-    api: "9000"
-    console: "9001"
+  type: NodePort
 
-ingress:
+console:
   enabled: true
+
+auth:
+  rootUser: "giuseppe"
+  rootPassword: "minio123"
