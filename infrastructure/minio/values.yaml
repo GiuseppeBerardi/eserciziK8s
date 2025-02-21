@@ -1,2 +1,5 @@
 # Default values
 #https://github.com/bitnami/charts/blob/main/bitnami/minio/values.yaml
+
+service:
+  type: NodePort
