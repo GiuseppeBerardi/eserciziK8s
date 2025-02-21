@@ -1,4 +1,2 @@
 # Default values
 #https://github.com/bitnami/charts/blob/main/bitnami/minio/values.yaml
-root-password: 3pUbzTbqvA                                                                                                                                                               
-root-user: admin 
